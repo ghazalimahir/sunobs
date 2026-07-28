@@ -391,6 +391,7 @@ footer{color:var(--muted)}
 .obs-table input:disabled{background:var(--result-bg);color:var(--muted);border-color:var(--border);-webkit-text-fill-color:var(--muted)}
 .obs-table td{border-bottom-color:var(--border)}
 .obs-table td.target{color:var(--text)}
+.obs-table .tr-row td.target{color:var(--muted)}
 .obs-table .tr-row td{background:var(--card-bg)}
 .obs-table .sun-row input:not(:disabled){background:var(--result-bg)}
 .obs-table input.invalid{background:var(--invalid-bg);color:var(--text)}
