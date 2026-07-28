@@ -27,7 +27,7 @@ function toast(msg,type){
  setTimeout(()=>{ el.classList.remove("show"); setTimeout(()=>el.remove(),300); },3200);
 }
 
-const APP_VERSION = "2.0.0";
+const APP_VERSION = "2.0.1";
 let coeffs = {};
 let coeffsError = null;
 const STATE_ORIGINS = {

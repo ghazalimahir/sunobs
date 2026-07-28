@@ -69,3 +69,7 @@ v2.0.0 — Kemas kini rupa & ciri
 - Notifikasi toast (bukan alert()) untuk simpan, padam dan eksport CSV.
 - Animasi halus pada kad, keputusan dan butang.
 - Enjin kiraan, senarai negeri/origin, dan SEMUA pembetulan iOS/Safari/Android sebelumnya TIDAK diubah.
+
+v2.0.1 — Pembetulan kontras tema gelap
+- Teks lajur Sasaran (TR Awal/P.Ki/P.Ka/TR Akhir) kini terang & jelas dalam mod gelap.
+- Highlight bacaan tidak sah (invalid) kini betul dalam kedua-dua tema.

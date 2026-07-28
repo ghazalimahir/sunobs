@@ -1,7 +1,7 @@
 // PENTING: tukar nilai CACHE ini pada SETIAP kali app.js/style.css/index.html
 // diubah. Kalau fail ni sendiri tak berubah, pelayar akan terus guna
 // cache lama selama-lamanya walaupun fail lain dah dikemaskini di GitHub.
-const CACHE = "sunobs-mobile-v2-0-0-ui-refresh";
+const CACHE = "sunobs-mobile-v2-0-1-dark-mode-fix";
 const ASSETS = [
   "./", "./index.html", "./style.css", "./app.js",
   "./coefficients.json", "./manifest.webmanifest",
