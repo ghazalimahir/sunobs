@@ -1,0 +1,424 @@
+
+:root{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#172033;background:#eef3f8}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:hidden}
+header{position:sticky;top:0;z-index:5;background:#17365d;color:#fff;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 8px #0003}
+header h1{margin:0;font-size:1.35rem}header p{margin:2px 0 0;font-size:.85rem;opacity:.86}
+main{max-width:980px;margin:auto;padding:14px}
+.card{background:#fff;border-radius:14px;padding:16px;margin-bottom:14px;box-shadow:0 2px 10px #18324a12;overflow:hidden}
+h2{font-size:1.05rem;margin:0 0 14px;color:#17365d}
+.grid{display:grid;gap:12px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+#date{max-width:190px}
+label{display:flex;flex-direction:column;gap:5px;font-weight:650;font-size:.86rem;min-width:0}
+input,select{width:100%;min-width:0;padding:11px;border:1px solid #bcc8d6;border-radius:9px;font-size:1rem;background:#fff}
+input:focus,select:focus{outline:2px solid #2f75b555;border-color:#2f75b5}
+
+.obs-wrap{width:100%;overflow:visible}
+.obs-table{width:100%;max-width:100%;table-layout:fixed;border-collapse:separate;border-spacing:6px 5px;font-size:.82rem;margin:0}
+.obs-table col.col-target{width:18%}
+.obs-table col.col-time{width:17%}
+.obs-table col.col-angle{width:32.5%}
+.obs-table th{background:#2f75b5;color:#fff;padding:9px 4px;text-align:center;line-height:1.1;border-right:1px solid #ffffff45}
+.obs-table th:first-child{border-radius:8px 0 0 0}
+.obs-table th:last-child{border-radius:0 8px 0 0;border-right:0}
+.obs-table th span{display:block;margin-top:3px;font-size:.68rem;font-weight:600;opacity:.9;white-space:nowrap}
+.obs-table td{border-bottom:1px solid #e2e8f0;padding:3px 0;min-width:0;vertical-align:middle}
+.obs-table td.target{font-weight:700;line-height:1.15;text-align:left;white-space:normal;word-break:normal;color:#24364b}
+.obs-table input{display:block;width:calc(100% - 2px);min-width:0;max-width:calc(100% - 2px);height:40px;margin:0 auto;padding:5px 3px;border-radius:7px;font-size:.84rem;text-align:center;font-variant-numeric:tabular-nums}
+.obs-table input.time{font-size:.74rem;letter-spacing:-.03em;padding:0 1px;min-width:0;max-width:100%;-webkit-appearance:auto;appearance:auto}
+.obs-table input:disabled{background:#f3f5f7;color:#9aa4af;border-color:#dfe5eb;opacity:1;-webkit-text-fill-color:#9aa4af}
+.obs-table .tr-row td{background:#fafbfd}
+.obs-table .tr-row input.hz{font-weight:750;background:#fff7d6}
+.obs-table .sun-row input:not(:disabled){background:#fffdf1}
+
+.mode-note{margin-top:12px;background:#e2f0d9;border-left:4px solid #548235;padding:9px;border-radius:6px;font-size:.86rem}
+.actions{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:14px}
+button{border:0;border-radius:10px;padding:12px 14px;font-weight:750;background:#17365d;color:#fff;cursor:pointer}
+button.secondary{background:#5b6b7c}button.danger{background:#a94442}
+.banner{padding:11px;border-radius:9px;text-align:center;font-weight:800;margin-bottom:12px}
+.banner.idle{background:#e8edf3}.banner.pass{background:#d9ead3;color:#274e13}.banner.warn{background:#fce5cd;color:#7f6000}.banner.error{background:#f4cccc;color:#990000}
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.result-grid div{background:#f4f7fa;padding:12px;border-radius:10px}
+.result-grid span{display:block;font-size:.78rem;color:#5c6875}.result-grid strong{display:block;margin-top:4px;font-size:1.08rem;color:#17365d}
+details{margin-top:12px}summary{cursor:pointer;font-weight:750}
+.detail-table{width:100%;border-collapse:collapse;margin-top:9px}.detail-table td{padding:7px;border-bottom:1px solid #e4e9ef}.detail-table td:last-child{text-align:right;font-weight:650}
+.record{border:1px solid #d8e0e8;border-radius:9px;padding:10px;margin:8px 0}.record strong{color:#17365d}.record small{display:block;color:#687482;margin-top:3px}
+footer{text-align:center;padding:22px;color:#657383;font-size:.78rem}
+
+@media(max-width:700px){
+ header{padding:12px 14px}header h1{font-size:1.25rem}header p{font-size:.8rem}
+ main{padding:10px}
+ .card{padding:12px;border-radius:12px;margin-bottom:11px}
+ .grid.two,.result-grid{grid-template-columns:1fr}
+ .actions{grid-template-columns:1fr 1fr}
+ h2{margin-bottom:10px}
+ .obs-table{font-size:.74rem}
+ .obs-table col.col-target{width:18%}
+ .obs-table col.col-time{width:17%}
+ .obs-table col.col-angle{width:32.5%}
+ .obs-table th{padding:8px 2px;font-size:.75rem}
+ .obs-table th span{font-size:.59rem}
+ .obs-table td{padding:2px 0}
+ .obs-table td.target{font-size:.7rem}
+ .obs-table input{height:38px;padding:4px 2px;font-size:.76rem;border-radius:6px}
+ .obs-table input.time{font-size:.64rem}
+}
+
+@media(max-width:390px){
+ main{padding:8px}
+ .card{padding:10px}
+ .obs-table col.col-target{width:18%}
+ .obs-table col.col-time{width:17%}
+ .obs-table col.col-angle{width:32.5%}
+ .obs-table th{font-size:.7rem}
+ .obs-table td.target{font-size:.66rem}
+ .obs-table input{font-size:.72rem;padding-left:1px;padding-right:1px}
+ .obs-table input.time{font-size:.60rem}
+ #date{max-width:165px}
+}
+
+@media(max-width:430px){
+ .obs-table{border-spacing:7px 5px}
+ .obs-table td{overflow:hidden}
+ .obs-table input.time{width:100%;max-width:100%;padding:0;font-size:.62rem}
+ .obs-table input.hz,.obs-table input.v{width:100%;max-width:100%;font-size:.72rem}
+}
+
+@media print{
+ header,.actions,.records,footer,#installBtn{display:none!important}
+ body{background:#fff}.card{box-shadow:none;border:1px solid #ddd}
+}
+
+
+
+
+/* v1.12F — pembetulan sebenar Safari iPhone */
+@media (max-width: 600px) {
+  .obs-table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: separate !important;
+    border-spacing: 5px 0 !important;
+  }
+
+  .obs-table th:nth-child(1),
+  .obs-table td:nth-child(1) {
+    width: 20% !important;
+  }
+
+  .obs-table th:nth-child(2),
+  .obs-table td:nth-child(2) {
+    width: 17% !important;
+  }
+
+  .obs-table th:nth-child(3),
+  .obs-table td:nth-child(3),
+  .obs-table th:nth-child(4),
+  .obs-table td:nth-child(4) {
+    width: 31.5% !important;
+  }
+
+  .obs-table th {
+    text-align: center !important;
+    vertical-align: middle !important;
+    padding: 8px 2px !important;
+    overflow: visible !important;
+  }
+
+  .obs-table th:first-child {
+    font-size: 0.78rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.25px !important;
+    white-space: nowrap !important;
+  }
+
+  .obs-table td:nth-child(2) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+
+  .obs-table input.time {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 2px !important;
+    font-size: 0.88rem !important;
+    line-height: normal !important;
+    text-align: center !important;
+    color: #111 !important;
+
+    /* Pulihkan kawalan native Safari; jangan guna appearance:none */
+    -webkit-appearance: auto !important;
+    appearance: auto !important;
+  }
+
+  .obs-table input.hz,
+  .obs-table input.v {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    text-align: center !important;
+  }
+}
+
+/* v1.12I — kekalkan input masa native HH:MM dan pusatkan pada Safari iPhone */
+@media (max-width: 600px) {
+  .obs-table th.target-head,
+  .obs-table th.time-head {
+    text-align: center !important;
+    vertical-align: middle !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .obs-table td.target,
+  .obs-table td:nth-child(2) {
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+
+  .obs-table input.time {
+    display: block !important;
+    width: calc(100% - 6px) !important;
+    min-width: 0 !important;
+    max-width: calc(100% - 6px) !important;
+    height: 38px !important;
+    margin: 0 auto !important;
+    padding: 4px 2px !important;
+    border-radius: 6px !important;
+    font-family: inherit !important;
+    font-size: 0.72rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    font-variant-numeric: tabular-nums !important;
+    -webkit-appearance: auto !important;
+    appearance: auto !important;
+  }
+
+  /* Safari/iOS: pusatkan kandungan dalaman kawalan type=time */
+  .obs-table input.time::-webkit-date-and-time-value {
+    text-align: center !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .obs-table input.time::-webkit-datetime-edit {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .obs-table input.time::-webkit-datetime-edit-fields-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+  }
+
+  .obs-table input.time::-webkit-calendar-picker-indicator {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .obs-table input.time {
+    font-size: 0.72rem !important;
+  }
+}
+
+/* v1.12J — pelarasan akhir iPhone: SASARAN muat dalam header, WAKTU center menegak */
+@media (max-width: 600px) {
+  .obs-table th.target-head {
+    box-sizing: border-box !important;
+    width: 20% !important;
+    padding: 0 1px !important;
+    height: 38px !important;
+    font-size: 0.64rem !important;
+    font-weight: 700 !important;
+    line-height: 38px !important;
+    letter-spacing: -0.35px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+
+  .obs-table th.time-head {
+    height: 38px !important;
+    line-height: 38px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .obs-table input.time {
+    box-sizing: border-box !important;
+    height: 38px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 38px !important;
+  }
+
+  .obs-table input.time::-webkit-date-and-time-value {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: normal !important;
+  }
+
+  .obs-table input.time::-webkit-datetime-edit,
+  .obs-table input.time::-webkit-datetime-edit-fields-wrapper {
+    height: 100% !important;
+    min-height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: normal !important;
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .obs-table th.target-head {
+    font-size: 0.60rem !important;
+    letter-spacing: -0.45px !important;
+  }
+}
+
+/* --- Tambahan v1.13.0: rekod penuh, eksport CSV, validasi, banner kemaskini --- */
+/* Semua peraturan iOS/Safari sedia ada di atas TIDAK disentuh. */
+.update-banner{background:#7f6000;color:#fff;text-align:center;padding:9px 12px;font-size:.86rem;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+input.invalid{border-color:#c0392b !important;background:#fdecea}
+input.invalid:focus{outline:2px solid #c0392b55}
+.mode-note.warn{background:#fce5cd;border-left-color:#c0392b;color:#7f3b00;font-weight:650}
+button.small{padding:7px 12px;font-size:.82rem;border-radius:8px}
+button:focus-visible{outline:3px solid #4c8fd1;outline-offset:2px}
+.records-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:10px;flex-wrap:wrap}
+.records-head h2{margin:0}
+.record{border:1px solid #d8e0e8;border-radius:9px;padding:10px;margin:8px 0;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.record strong{color:#17365d}.record small{display:block;color:#687482;margin-top:3px}
+.record-actions{display:flex;gap:8px}
+
+@media print{
+ #recordsSection,#updateBanner{display:none!important}
+}
+
+/* v1.13.1 - lebar kotak Waktu khusus Android (dikesan via JS, bukan @supports) */
+/* Ikon jam pada input time Android makan ruang lebih, jadi lajur Waktu */
+/* perlu sedikit lebih lebar berbanding iPhone. Tak jejas Safari iOS. */
+@media (max-width: 600px) {
+  html.is-android .obs-table col.col-time{width:23% !important}
+  html.is-android .obs-table col.col-angle{width:29.5% !important}
+  html.is-android .obs-table input.time{
+    font-size:.8rem !important;
+    padding:2px 1px !important;
+    letter-spacing:normal !important;
+  }
+}
+
+/* ============================================================
+   v2.0 — Tema gelap/terang, animasi, toast, carta trend, carian rekod
+   Semua peraturan di bawah TAMBAHAN sahaja. Tiada peraturan sedia ada
+   di atas (termasuk semua pembetulan iOS/Android) diubah atau dibuang.
+   ============================================================ */
+:root{
+  --bg:#eef3f8; --text:#172033; --card-bg:#fff; --card-shadow:0 2px 10px #18324a12;
+  --border:#bcc8d6; --header-grad:linear-gradient(135deg,#17365d,#255089);
+  --primary:#17365d; --accent:#2f75b5; --secondary-btn:#5b6b7c; --danger:#a94442;
+  --muted:#5c6875; --result-bg:#f4f7fa;
+  --chart-grid:#d8e0e8; --chart-pass:#4caf7d; --chart-warn:#c0392b;
+  --toast-bg:#17365d; --toast-text:#fff;
+  color-scheme:light;
+}
+html[data-theme="dark"]{
+  --bg:#0e1520; --text:#e6edf5; --card-bg:#17212f; --card-shadow:0 2px 16px #0007;
+  --border:#2c3b50; --header-grad:linear-gradient(135deg,#0b1522,#15283f);
+  --primary:#4c8fd1; --accent:#4c8fd1; --secondary-btn:#3a4a5e; --danger:#e0605a;
+  --muted:#94a3b8; --result-bg:#101a27;
+  --chart-grid:#2c3b50; --chart-pass:#5fd39a; --chart-warn:#ff6b6b;
+  --toast-bg:#2f75b5; --toast-text:#fff;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: dark){
+  html:not([data-theme="light"]):not([data-theme="dark"]){
+    --bg:#0e1520; --text:#e6edf5; --card-bg:#17212f; --card-shadow:0 2px 16px #0007;
+    --border:#2c3b50; --header-grad:linear-gradient(135deg,#0b1522,#15283f);
+    --primary:#4c8fd1; --accent:#4c8fd1; --secondary-btn:#3a4a5e; --danger:#e0605a;
+    --muted:#94a3b8; --result-bg:#101a27;
+    --chart-grid:#2c3b50; --chart-pass:#5fd39a; --chart-warn:#ff6b6b;
+    --toast-bg:#2f75b5; --toast-text:#fff;
+    color-scheme:dark;
+  }
+}
+
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--text);transition:background .25s ease,color .25s ease}
+header{background:var(--header-grad);transition:background .25s ease}
+.header-actions{display:flex;align-items:center;gap:8px}
+.card{background:var(--card-bg);box-shadow:var(--card-shadow);transition:background .25s ease,box-shadow .25s ease}
+h2{color:var(--primary)}
+label{color:var(--text)}
+input,select{background:var(--card-bg);color:var(--text);border-color:var(--border)}
+input:focus,select:focus{border-color:var(--accent)}
+button{background:var(--primary);transition:transform .12s ease,filter .15s ease}
+button:hover{filter:brightness(1.08)}
+button:active{transform:scale(.97)}
+button.secondary{background:var(--secondary-btn)}
+button.danger{background:var(--danger)}
+.result-grid div{background:var(--result-bg)}
+.result-grid strong{color:var(--primary)}
+.record{border-color:var(--border);background:var(--card-bg)}
+.record strong{color:var(--primary)}
+.record small{color:var(--muted)}
+footer{color:var(--muted)}
+
+.obs-table input{background:var(--card-bg);color:var(--text);border-color:var(--border)}
+.obs-table input:disabled{background:var(--result-bg);color:var(--muted);border-color:var(--border);-webkit-text-fill-color:var(--muted)}
+.obs-table td{border-bottom-color:var(--border)}
+.obs-table .tr-row td{background:var(--card-bg)}
+.obs-table .sun-row input:not(:disabled){background:var(--result-bg)}
+@media(max-width:600px){
+  html[data-theme="dark"] .obs-table input.time,
+  html:not([data-theme="light"]) .obs-table input.time{color:var(--text) !important}
+}
+@media(prefers-color-scheme:light){
+  html:not([data-theme="dark"]) .obs-table input.time{color:#111 !important}
+}
+
+.results,#trendSection{animation:fadeIn .35s ease}
+.card{animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.banner{transition:background .2s ease,color .2s ease}
+
+.hint{margin:-6px 0 10px;font-size:.8rem;color:var(--muted)}
+#trendChart{width:100%;display:block}
+.empty-state{color:var(--muted);font-size:.88rem;text-align:center;padding:10px 0;margin:0}
+
+.records-filter{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.records-filter input[type="search"]{flex:1 1 220px}
+.records-filter select{flex:0 0 160px}
+
+.toast-container{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;flex-direction:column;gap:8px;z-index:50;width:min(92vw,420px);pointer-events:none}
+.toast{background:var(--toast-bg);color:var(--toast-text);padding:11px 16px;border-radius:10px;box-shadow:0 6px 20px #0004;font-size:.88rem;font-weight:650;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast.toast-error{background:var(--danger)}
+.toast.toast-success{background:#3f8f5f}
+
+@media print{
+  #trendSection,.header-actions #themeToggleBtn{display:none!important}
+}

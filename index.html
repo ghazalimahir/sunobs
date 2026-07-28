@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17365d">
+<title>SunObs Mobile</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>SunObs Mobile</h1>
+    <p>Cerapan Matahari bagi Azimut</p>
+  </div>
+  <div class="header-actions">
+    <button id="themeToggleBtn" class="secondary small" type="button" aria-label="Tukar tema">🌙 Gelap</button>
+    <button id="installBtn" class="secondary" hidden>Pasang App</button>
+  </div>
+</header>
+
+<div id="updateBanner" class="update-banner" hidden>
+  Kemaskini baharu tersedia.
+  <button id="updateBtn" class="small">Muat Semula</button>
+</div>
+
+<main>
+<section class="card">
+  <h2>Maklumat Cerapan</h2>
+  <div class="grid two">
+    <label>Tarikh<input id="date" type="date" value="2003-03-07"></label>
+    <label>Negeri
+      <select id="state">
+        <option value="Johor">Johor</option>
+        <option value="Negeri Sembilan">Negeri Sembilan</option>
+        <option value="Melaka">Melaka</option>
+        <option value="Pahang" selected>Pahang</option>
+        <option value="Selangor">Selangor</option>
+        <option value="Terengganu">Terengganu</option>
+        <option value="Pulau Pinang">Pulau Pinang</option>
+        <option value="Seberang Perai">Seberang Perai</option>
+        <option value="Kedah">Kedah</option>
+        <option value="Perlis">Perlis</option>
+        <option value="Perak">Perak</option>
+        <option value="Kelantan">Kelantan</option>
+      </select>
+    </label>
+    <label>Stesen Origin<input id="originStation" type="text" readonly></label>
+    <label>Latitud Origin GDM2000<input id="originLatitude" type="text" readonly></label>
+    <label>Longitud Origin GDM2000 (rujukan)<input id="originLongitude" type="text" readonly></label>
+    <label>Jenis Sudut Pugak
+      <select id="verticalType">
+        <option value="zenith">ZENIT 0°</option>
+        <option value="signed">UFUK 0° BERTANDA</option>
+        <option value="360">UFUK 0° 0–360</option>
+      </select>
+    </label>
+    <label>Koordinat U/S (m)<input id="northing" type="number" step="0.001" value="22017"></label>
+    <label>Koordinat T/B (m)<input id="easting" type="number" step="0.001" value="-4900"></label>
+    <label>Stesen<input id="station" type="text" placeholder="Nama stesen"></label>
+    <label>Tanda Rujuk<input id="reference" type="text" placeholder="Nama TR"></label>
+  </div>
+  <div class="mode-note" id="modeNote"></div>
+  <div class="mode-note warn" id="coeffsStatus" hidden></div>
+</section>
+
+<section class="card">
+  <h2>Set 1</h2>
+  <div id="set1"></div>
+</section>
+
+<section class="card">
+  <h2>Set 2</h2>
+  <div id="set2"></div>
+</section>
+
+<section class="actions">
+  <button id="calculateBtn">Kira Azimut</button>
+  <button id="saveBtn" class="secondary">Simpan Rekod</button>
+  <button id="printBtn" class="secondary">Cetak / PDF</button>
+  <button id="resetBtn" class="danger">Kosongkan</button>
+</section>
+
+<section class="card results" id="results">
+  <h2>Keputusan</h2>
+  <div id="statusBanner" class="banner idle" aria-live="polite">Belum dikira</div>
+  <div class="result-grid">
+    <div><span>Set 1 — Bearing Grid TR</span><strong id="set1Grid">—</strong></div>
+    <div><span>Set 2 — Bearing Grid TR</span><strong id="set2Grid">—</strong></div>
+    <div><span>Purata Bearing Grid</span><strong id="meanGrid">—</strong></div>
+    <div><span>Beza Set</span><strong id="setDiff">—</strong></div>
+  </div>
+  <details>
+    <summary>Butiran kiraan</summary>
+    <div id="detailResults"></div>
+  </details>
+</section>
+
+<section class="card" id="trendSection">
+  <h2>Trend Ketepatan</h2>
+  <p class="hint">Beza set (″) bagi 12 rekod terkini. Garis putus-putus = had 30″.</p>
+  <canvas id="trendChart" height="120" hidden></canvas>
+  <p class="empty-state" id="trendEmpty">Belum ada rekod untuk dipaparkan sebagai carta.</p>
+</section>
+
+<section class="card" id="recordsSection">
+  <div class="records-head">
+    <h2>Rekod Tersimpan</h2>
+    <button id="exportCsvBtn" class="secondary small">Eksport CSV</button>
+  </div>
+  <div class="records-filter">
+    <input id="recordSearch" type="search" placeholder="Cari ikut stesen, TR, negeri atau tarikh...">
+    <select id="recordSort">
+      <option value="newest">Terkini dahulu</option>
+      <option value="oldest">Terlama dahulu</option>
+    </select>
+  </div>
+  <div id="savedRecords" class="records"></div>
+</section>
+</main>
+
+<div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+<footer>SunObs Mobile v<span id="appVersion">1.13.0</span> · Offline · Tahun 2000–2050 · Enjin Excel v2.3D</footer>
+<script src="app.js"></script>
+</body>
+</html>

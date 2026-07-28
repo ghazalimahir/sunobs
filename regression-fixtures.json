@@ -1,0 +1,310 @@
+{
+  "source": "Sun Obs Ver. 2.3D-BORANG-UTAMA-PRO.xlsx",
+  "states": {
+    "Johor": {
+      "originStation": "Gunung Belumut",
+      "originLatDD": 2.0425,
+      "stationLatDD": 2.2416315333333334,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.001728115995058724,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 96.33027777777778,
+        "trueTR": 162.2786111111111,
+        "tirusanRounded": 0.0016666666666666668,
+        "gridTR": 162.28027777777777
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 96.40694444444445,
+        "trueTR": 162.24333333333334,
+        "tirusanRounded": 0.0016666666666666668,
+        "gridTR": 162.245
+      },
+      "meanGridTR": 162.2626388888889,
+      "differenceArcsec": 126.9999999999527
+    },
+    "Negeri Sembilan": {
+      "originStation": "Gun Hill",
+      "originLatDD": 2.7122222222222225,
+      "stationLatDD": 2.911353755555556,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.00224402421559679,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 96.5163888888889,
+        "trueTR": 162.46472222222224,
+        "tirusanRounded": 0.0022222222222222222,
+        "gridTR": 162.46694444444447
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 96.60694444444445,
+        "trueTR": 162.44333333333338,
+        "tirusanRounded": 0.0022222222222222222,
+        "gridTR": 162.44555555555561
+      },
+      "meanGridTR": 162.45625000000004,
+      "differenceArcsec": 76.99999999986176
+    },
+    "Melaka": {
+      "originStation": "Gun Hill",
+      "originLatDD": 2.7122222222222225,
+      "stationLatDD": 2.911353755555556,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.00224402421559679,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 96.5163888888889,
+        "trueTR": 162.46472222222224,
+        "tirusanRounded": 0.0022222222222222222,
+        "gridTR": 162.46694444444447
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 96.60694444444445,
+        "trueTR": 162.44333333333338,
+        "tirusanRounded": 0.0022222222222222222,
+        "gridTR": 162.44555555555561
+      },
+      "meanGridTR": 162.45625000000004,
+      "differenceArcsec": 76.99999999986176
+    },
+    "Pahang": {
+      "originStation": "Gunung Sinyum",
+      "originLatDD": 3.7108333333333334,
+      "stationLatDD": 3.909964866666667,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.003012695124436549,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 96.79583333333333,
+        "trueTR": 162.74416666666667,
+        "tirusanRounded": 0.0030555555555555557,
+        "gridTR": 162.74722222222223
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 96.90722222222223,
+        "trueTR": 162.74361111111114,
+        "tirusanRounded": 0.0030555555555555557,
+        "gridTR": 162.7466666666667
+      },
+      "meanGridTR": 162.74694444444447,
+      "differenceArcsec": 1.999999999929969
+    },
+    "Selangor": {
+      "originStation": "Bukit Asa",
+      "originLatDD": 3.6799999999999997,
+      "stationLatDD": 3.879131533333333,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.0029889739668244792,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 96.78694444444444,
+        "trueTR": 162.73527777777775,
+        "tirusanRounded": 0.0030555555555555557,
+        "gridTR": 162.73833333333332
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 96.89805555555556,
+        "trueTR": 162.73444444444448,
+        "tirusanRounded": 0.0030555555555555557,
+        "gridTR": 162.73750000000004
+      },
+      "meanGridTR": 162.73791666666668,
+      "differenceArcsec": 2.999999999792635
+    },
+    "Terengganu": {
+      "originStation": "Gunung Gajah Trom",
+      "originLatDD": 4.945833333333334,
+      "stationLatDD": 5.144964866666667,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.003962032819156973,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 97.14472222222223,
+        "trueTR": 163.09305555555557,
+        "tirusanRounded": 0.0038888888888888888,
+        "gridTR": 163.09694444444446
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 97.2825,
+        "trueTR": 163.11888888888893,
+        "tirusanRounded": 0.0038888888888888888,
+        "gridTR": 163.12277777777783
+      },
+      "meanGridTR": 163.10986111111114,
+      "differenceArcsec": 93.00000000012005
+    },
+    "Pulau Pinang": {
+      "originStation": "Fort Cornwallis",
+      "originLatDD": 5.420833333333333,
+      "stationLatDD": 5.619964866666667,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.004326696631437381,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 97.28027777777778,
+        "trueTR": 163.2286111111111,
+        "tirusanRounded": 0.0044444444444444444,
+        "gridTR": 163.23305555555552
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 97.42805555555556,
+        "trueTR": 163.26444444444445,
+        "tirusanRounded": 0.0044444444444444444,
+        "gridTR": 163.26888888888888
+      },
+      "meanGridTR": 163.2509722222222,
+      "differenceArcsec": 129.0000000000873
+    },
+    "Seberang Perai": {
+      "originStation": "Fort Cornwallis",
+      "originLatDD": 5.420833333333333,
+      "stationLatDD": 5.619964866666667,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.004326696631437381,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 97.28027777777778,
+        "trueTR": 163.2286111111111,
+        "tirusanRounded": 0.0044444444444444444,
+        "gridTR": 163.23305555555552
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 97.42805555555556,
+        "trueTR": 163.26444444444445,
+        "tirusanRounded": 0.0044444444444444444,
+        "gridTR": 163.26888888888888
+      },
+      "meanGridTR": 163.2509722222222,
+      "differenceArcsec": 129.0000000000873
+    },
+    "Kedah": {
+      "originStation": "Gunung Perak",
+      "originLatDD": 5.981388888888889,
+      "stationLatDD": 6.180520422222222,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.004756658111559847,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 97.44083333333334,
+        "trueTR": 163.38916666666665,
+        "tirusanRounded": 0.004722222222222222,
+        "gridTR": 163.39388888888888
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 97.60055555555556,
+        "trueTR": 163.43694444444446,
+        "tirusanRounded": 0.004722222222222222,
+        "gridTR": 163.4416666666667
+      },
+      "meanGridTR": 163.4177777777778,
+      "differenceArcsec": 172.00000000011642
+    },
+    "Perlis": {
+      "originStation": "Gunung Perak",
+      "originLatDD": 5.981388888888889,
+      "stationLatDD": 6.180520422222222,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.004756658111559847,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 97.44083333333334,
+        "trueTR": 163.38916666666665,
+        "tirusanRounded": 0.004722222222222222,
+        "gridTR": 163.39388888888888
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 97.60055555555556,
+        "trueTR": 163.43694444444446,
+        "tirusanRounded": 0.004722222222222222,
+        "gridTR": 163.4416666666667
+      },
+      "meanGridTR": 163.4177777777778,
+      "differenceArcsec": 172.00000000011642
+    },
+    "Perak": {
+      "originStation": "Gunung Hijau Larut",
+      "originLatDD": 4.859166666666666,
+      "stationLatDD": 5.058298199999999,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.0038954675558170886,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 97.12027777777779,
+        "trueTR": 163.06861111111112,
+        "tirusanRounded": 0.0038888888888888888,
+        "gridTR": 163.07250000000002
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 97.25611111111111,
+        "trueTR": 163.09250000000003,
+        "tirusanRounded": 0.0038888888888888888,
+        "gridTR": 163.09638888888892
+      },
+      "meanGridTR": 163.08444444444447,
+      "differenceArcsec": 86.00000000005821
+    },
+    "Kelantan": {
+      "originStation": "Bukit Panau (Baru)",
+      "originLatDD": 5.8936111111111105,
+      "stationLatDD": 6.092742644444444,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.0046893591673700845,
+      "set1": {
+        "declination": -5.515,
+        "sunAzimuth": 97.41555555555556,
+        "trueTR": 163.36388888888888,
+        "tirusanRounded": 0.004722222222222222,
+        "gridTR": 163.3686111111111
+      },
+      "set2": {
+        "declination": -5.513888888888889,
+        "sunAzimuth": 97.57333333333334,
+        "trueTR": 163.40972222222223,
+        "tirusanRounded": 0.004722222222222222,
+        "gridTR": 163.41444444444446
+      },
+      "meanGridTR": 163.39152777777778,
+      "differenceArcsec": 165.00000000005457
+    }
+  },
+  "sign_tests": {
+    "timur": {
+      "easting": 4900.0,
+      "deltaLongitudeDD": 0.04418166666666667,
+      "tirusanDD": -0.003012695124436549,
+      "tirusanRounded": -0.0030555555555555557,
+      "grid1": 162.7411111111111,
+      "grid2": 162.74055555555557,
+      "mean": 162.74083333333334
+    },
+    "barat": {
+      "easting": -4900.0,
+      "deltaLongitudeDD": -0.04418166666666667,
+      "tirusanDD": 0.003012695124436549,
+      "tirusanRounded": 0.0030555555555555557,
+      "grid1": 162.74722222222223,
+      "grid2": 162.7466666666667,
+      "mean": 162.74694444444447
+    },
+    "meridian": {
+      "easting": 0.0,
+      "deltaLongitudeDD": 0,
+      "tirusanDD": 0,
+      "tirusanRounded": 0,
+      "grid1": 162.74416666666667,
+      "grid2": 162.74361111111114,
+      "mean": 162.7438888888889
+    }
+  }
+}
